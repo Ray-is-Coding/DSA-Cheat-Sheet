@@ -1,0 +1,15 @@
+def max_min(a):
+    mx, mn = 0, 0
+    for i in a:
+        if i > mx:
+            mx  = i
+        if i < mn:
+            mn = i
+    return "Max is : " + str(mx) + "\n" + "Min is : " + str(mn)
+
+a = [-1, 0, 4.5, 3, 34]
+print(max_min(a))
+
+o/p : Max is : 34
+	  Min is : -1
+  
