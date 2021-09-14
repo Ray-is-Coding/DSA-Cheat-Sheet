@@ -52,3 +52,4 @@ print("Array 2 :", b)
 print("Array 3 after intersection :", l)
  
 
+ 
