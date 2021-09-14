@@ -1,0 +1,54 @@
+#finding union of two sorted arrays
+
+a = [1, 2, 3, 4, 5, 6]
+b = [6, 7, 8, 9, 10]
+i, j = 0, 0
+l = []
+while i < len(a) and j < len(b):
+    if a[i] == b[j]:
+        l.append(a[i])
+        i += 1
+        j += 1
+    elif a[i] < b[j]:
+        l.append(a[i])
+        i += 1
+    else:
+        l.append(b[j])
+        j += 1
+while i < len(a):
+    l.append(a[i])
+    i += 1
+while j < len(b):
+    l.append(b[j])
+    j += 1
+
+print("Array 1 :", a)
+print("Array 2 :", b)
+print("Array 3 after union :", l)
+
+o/p: Array 1 : [1, 2, 3, 4, 5, 6]
+	 Array 2 : [6, 7, 8, 9, 10]
+	 Array 3 after union : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	 
+#finding intersection of two sorted arrays
+
+a = [1, 2, 3, 4, 5, 6]
+b = [4, 5, 6, 7, 10]
+i, j = 0, 0
+l = []
+
+while i < len(a) and j < len(b):
+    if a[i] == b[j]:
+        l.append(a[i])
+        i += 1
+        j += 1
+    elif a[i] < b[j]:
+        i += 1
+    else:
+        j += 1
+        
+print("Array 1 :", a)
+print("Array 2 :", b)
+print("Array 3 after intersection :", l)
+ 
+
