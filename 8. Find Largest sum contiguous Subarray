@@ -1,0 +1,15 @@
+#For the instant unoptimized method we can derive all the possible subarrays and then we can get the sum out of them and then we can derive the max sum and that would be our answer. But for a better solution we can follow the Kadane's algorithm which follows such as for each index the max sum can be either the element of that index or the sum of the elements upto that index. I am using the same concept to solve this problem as well. Here we will be using two sum variables - current_sum and max_sum. The current sum will keep track of the sum of the current index and the max_sum will keep track if the current sum is greater or less than it and store the max sum.
+
+
+def max_sum(a):
+	max_current, max_sum = a[0], a[0]
+	for i in range(1, len(a)):
+		max_current = max(a[i], max_current+a[i])
+		if max_current > max_sum:
+			max_sum = max_current
+	return max_sum 
+a = [-2, -3, 4, -1, -2, 1, 5, -3]
+print(max_sum(a))
+
+o/p : 7 
+
